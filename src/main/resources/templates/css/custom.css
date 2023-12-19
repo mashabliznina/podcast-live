@@ -1,0 +1,83 @@
+.bg {
+    background-color: #41b3a3;
+}
+
+.my-text-primary {
+    color: lightslategray;
+}
+
+.blog-header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.a-link {
+    color: darkgray;
+    font-size: 0.9em;
+}
+
+.contact-box-top {
+    color: hsl(0, 25%, 57%);
+}
+
+.text-footer {
+    font-size: 14px;
+    font-style: normal;
+    color: darkgrey;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mb-bottom {
+    margin-bottom: 150pt;
+}
+
+.footer {
+    /*position:absolute;*/
+    bottom:0;
+    width:100%;
+    height: 90px;
+    line-height: 90px;
+    background-color: #ffffff;
+  }
+
+.card-height {
+    height: 238pt;
+}
+
+episode page
+
+.h1-header {
+    font-family: Nunito;
+    font-size: 50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.p-main-text {
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+    text-align: left;
+}
+
+.episode-mb-bottom {
+    margin-bottom: 30pt;
+}
+
+.episode-mt-top {
+    margin-top: 40pt;
+}
+
+@media only screen and (min-width : 1200px) {
+    .container { width: 960px; }
+}
+
+/* Episode page */
+.title-align {
+        text-align:center;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<!--<div th:replace="base.html :: header" xmlns:th="http://www.w3.org/1999/xhtml"></div>-->
+<link th:href="@{/css/base.css}" rel="stylesheet" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link th:href="@{static/css/base.css}" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{static/css/base.css}">
+    <title>Ну давай разбираться</title>
+</head>
+<body>
+<div th:fragment="header">
+    <nav class="navbar navbar-expand-md navbar-light mb-4 container border-bottom">
+        <div class="container-fluid align-items-end">
+            <div class="col-4 pt-1">
+                <a class="link-secondary" href='/'>
+                    <img th:src="@{/images/Logo.png}" width="200" height="200" alt="" src=""/>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link p-2 ml-auto" href="/episodes/">ВЫПУСКИ</a>
+                    <a class="nav-link p-2 ml-auto" href="/subscribe/">ПОДПИСАТЬСЯ</a>
+                    <!-- <a class="nav-link p-2 ml-auto" href="#">ПОДДЕРЖАТЬ</a> -->
+                    <a class="nav-link p-2 ml-auto" href="/feedback/">ПОДЕЛИТЬСЯ МНЕНИЕМ</a>
+                    <a class="nav-link p-2 ml-auto" href="/contact_page/">КОНТАКТЫ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<main>
+    <div class="container">
+        <h1 class="display-4 fst-italic episode-mb-bottom episode-mt-top">Как с нами связаться</h1>
+        <div class="row">
+            <div class="col-10">
+                <p class="lead my-3">Мы очень хотим сделать наш подкаст еще лучше, поэтому будет круто, если вы дадите обратную связь.
+                    Это можно сделать в
+                    <a href="https://forms.gle/1a7tEn5aCFPk5R7eA" class="a-link">Google Form</a>
+                    и в
+                    <a href="https://podcasts.apple.com/gb/podcast/%D0%BD%D1%83
+                        -%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9-%D1%80%D0%B0%D0%B7%D0%B1
+                        %D0%B8%D1%80%D0%B0%D1%82%D1%8C%D1%81%D1%8F/id1579561576" class="a-link">iTunes</a>
+                    : поставить звездочки и оставить комментарий.<br></p>
+
+
+                <p class="lead my-3">Для того, чтобы оставить отзыв в iTunes:<br>
+                    пройдите по
+                    <a href="https://podcasts.apple.com/gb/podcast/%D0%BD%D1%83
+                        -%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9-%D1%80%D0%B0%D0%B7%D0%B1
+                        %D0%B8%D1%80%D0%B0%D1%82%D1%8C%D1%81%D1%8F/id1579561576" class="a-link">ссылке</a>;<br>
+                    в описании подкаста найдите вкладку «Оценки и отзывы» (Ratings and reviews);<br>
+                    на нужной вкладке будет кнопка «оставить отзыв» (write a review).<br></p>
+
+                <p class="lead my-3">Расскажите о подкасте друзьям в Инстаграме и отмечайте нас:<br></p>
+                <p class="lead my-3">Маша:
+                    <a href="https://www.instagram.com/mashabliznina/" class="a-link" >@mashabliznina</a><br></p>
+                <p class="lead my-3">Саша:
+                    <a href="https://www.instagram.com/sashabliznina/" class="a-link" >@sashabliznina</a><br>
+                </p>
+
+
+                <p class="lead my-3">Возможно у вас есть идеи, которые помогут улучшить наш подкаст и сделать его более качественным?
+                </p>
+
+
+                <p class="lead my-3">Или вам нравится заниматься продвижением подкастов и хочется нам помочь сделать проект
+                    более узнаваемым?<br>
+                </p>
+
+                <p class="lead my-3">Может быть вы дизанер и у вас есть идеи, как улучшить дизайн обложки подкаста?<br>
+                </p>
+
+                <p class="lead my-3">Напишите нам на почту <a href=mailto:nudavayrazbiratsya@gmail.com HTML link class="a-link">nudavayrazbiratsya@gmail.com</a>,
+                    мы будем рады услышать ваши идеи!
+                </p>
+
+            </div>
+        </div>
+    </div>
+</main>
+<div th:fragment="footer">
+    <footer class="border-top container footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <p class="text-footer footer-mt">
+                        Слушайте нас:
+                        <a href="https://podcasts.apple.com/gb/podcast/%D0%BD%D1%83-%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9-%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D1%82%D1%8C%D1%81%D1%8F/id1579561576"
+                           class="a-link">Apple Podcasts</a>|
+                        <a href="https://music.yandex.ru/album/17277743" class="a-link">Яндекс.Музыка</a>|
+                        <a href="https://open.spotify.com/show/7C54r1ip1XSTYIBUCJCffQ" class="a-link">Spotify</a>|
+                        <a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xODIzOTM4LnJzcw"
+                           class="a-link">Google Podcasts</a>
+                        <br>
+                    </p>
+                    <p class="text-footer footer-mt">
+                        Связаться с нами:
+                        <a href=mailto:nudavayrazbiratsya@gmail.com HTML link
+                           class="a-link">nudavayrazbiratsya@gmail.com</a>|
+                        <a href="https://t.me/nudavayrazbiratsya" class="a-link">Телеграм</a>
+                        <br>
+                    </p>
+                    <p class="text-footer episode-mt-top">© Copyright 2021 Ну давай разбираться</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+</html>

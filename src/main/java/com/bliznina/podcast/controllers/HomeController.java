@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping
 public class HomeController {
-    @GetMapping
+    @GetMapping("/")
     public String home(){
         return "home";
+    }
+
+    @GetMapping("/contacts")
+    public String showContacts(){
+        return "contacts";
     }
 }

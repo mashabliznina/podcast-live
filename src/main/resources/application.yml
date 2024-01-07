@@ -1,0 +1,18 @@
+#app:
+#  datasource:
+#    jdbc-url: jdbc:postgresql://localhost:5432/dada
+#    username: postgres
+#    password: password
+#    pool-size: 30
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

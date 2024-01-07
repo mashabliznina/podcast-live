@@ -21,15 +21,20 @@
         <div class="col-md-12">
             <h2 class="display-5 fst-italic border-bottom">СВЕЖИЕ ВЫПУСКИ</h2>
         </div>
-        {% for episode in object_list %}
-        <div class="col-md-6 episode-mt-top">
+        <div class="col-md-6 episode-mt-top" th:each="episode : ${episodes}">
             <div class="card g-0 shadow-sm h-md-250 position-relative">
                 <div class="card-body">
-                    <strong class="d-inline-block mb-2 my-text-primary">{{episode.theme}}</strong>
-                    <h4 class="mb-0">{{episode.title}}</h4>
-                    <div class="mb-1 text-muted">{{episode.date}}</div>
+                    <strong class="d-inline-block mb-2 my-text-primary">
+                        <span th:text="${episode.theme}"></span>
+                    </strong>
+                    <h4 class="mb-0">
+                        <span th:text="${episode.title}"></span>
+                    </h4>
+                    <div class="mb-1 text-muted">
+                        <span th:text="${episode.date}"></span>
+                    </div>
                     <p class="lead">
-                        {{episode.preview}}...
+                        <span th:text="${episode.preview}"></span>
                         <a href="/episodes/{{episode.pk}}" class="a-link">подробнее</a>
                     </p>
                     <audio controls>
@@ -40,7 +45,6 @@
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
     <div class="row">
         <div class="col-md-12">

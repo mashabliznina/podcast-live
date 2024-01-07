@@ -9,15 +9,16 @@
             <div class="card shadow-sm position-relative card-height">
                 <div class="card-body">
                         <strong class="d-inline-block mb-2 my-text-primary">
-                            <span th:text="${episode.theme}">Theme</span>
+                            <span th:text="${episode.theme}"></span>
                         </strong>
                     <h4 class="mb-0">
-                        <span th:text="${episode.title}">Title</span>
+                        <span th:text="${episode.title}"></span>
                     </h4>
                     <div class="mb-1 text-muted">
-                        <span th:text="${episode.date}">Date</span>
+                        <span th:text="${episode.date}"></span>
                     </div>
-                    <p class="lead">{{episode.preview}}.
+                    <p class="lead">
+                        <span th:text="${episode.preview}"></span>
                         <a href="/episodes/{{episode.pk}}" class="a-link">подробнее</a>
                     </p>
                     <audio controls>

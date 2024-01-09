@@ -28,12 +28,22 @@ public class PageController {
         return "home";
     }
 
-    @GetMapping("/contacts")
+    @GetMapping("/contacts/")
     public String showContacts(){
         return "contacts";
     }
 
-    @GetMapping("/episodes")
+    @GetMapping("/subscribe/")
+    public String showSubscribe(){
+        return "subscribe";
+    }
+
+    @GetMapping("/feedback/")
+    public String showFeedback(){
+        return "feedback";
+    }
+
+    @GetMapping("/episodes/")
     public String showAllEpisodes(Model model){
         model.addAttribute("episodes",episodeService.getAllEpisodes());
         return "episodes";

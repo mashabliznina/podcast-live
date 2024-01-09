@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.BatchSize;
 
 import java.time.LocalDate;
 
@@ -15,11 +16,12 @@ import java.time.LocalDate;
 @Data
 public class Episode {
     public Episode(){ }
-    public Episode(String theme, String title, LocalDate date, String preview) {
+    public Episode(String theme, String title, LocalDate date, String preview, String body) {
         this.theme = theme;
         this.title = title;
         this.preview = preview;
         this.date = date;
+        this.body = body;
     }
 
     @Id
@@ -27,15 +29,18 @@ public class Episode {
     @Column(name = "id")
     Integer id;
 
-    @Column(name = "theme")
+    @Column(name = "theme",  length = 30)
     String theme;
 
-    @Column(name = "title")
+    @Column(name = "title",  length = 70)
     String title;
 
     @Column(name = "date")
     LocalDate date;
 
-    @Column(name = "preview")
+    @Column(name = "preview",  length = 70)
     String preview;
+
+    @Column(name = "body")
+    String body;
 }

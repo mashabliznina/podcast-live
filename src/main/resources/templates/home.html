@@ -38,8 +38,7 @@
                         <a href="/episodes/{{episode.pk}}" class="a-link">подробнее</a>
                     </p>
                     <audio controls>
-                        <source src="https://www.buzzsprout.com/1823938/{{episode.buzz_id}}.mp3?download=true"
-                                type="audio/mpeg">
+                        <source th:src="@{'https://www.buzzsprout.com/1823938/' + ${episode.buzz_id} + '.mp3?download=true'}" type="audio/mpeg" src="">
                     </audio>
                     <!-- ad :: after -> next post -->
                 </div>

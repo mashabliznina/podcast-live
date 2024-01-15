@@ -43,4 +43,7 @@ public class Episode {
 
     @Column(name = "body")
     String body;
+
+    @Column(name = "buzz_id")
+    String buzz_id;
 }

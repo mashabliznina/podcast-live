@@ -13,6 +13,7 @@
 .a-link {
     color: darkgray;
     font-size: 0.9em;
+    margin-top: auto;
 }
 
 .contact-box-top {
@@ -80,4 +81,12 @@ episode page
 /* Episode page */
 .title-align {
         text-align:center;
+}
+
+.preview-text{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Number of lines to show */
+        -webkit-box-orient: vertical;
 }

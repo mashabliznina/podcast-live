@@ -16,12 +16,14 @@ import java.time.LocalDate;
 @Data
 public class Episode {
     public Episode(){ }
-    public Episode(String theme, String title, LocalDate date, String preview, String body) {
+    public Episode(String theme, String title, LocalDate date,
+                   String preview, String body, String buzz_id) {
         this.theme = theme;
         this.title = title;
         this.preview = preview;
         this.date = date;
         this.body = body;
+        this.buzz_id = buzz_id;
     }
 
     @Id
@@ -32,16 +34,16 @@ public class Episode {
     @Column(name = "theme",  length = 30)
     String theme;
 
-    @Column(name = "title",  length = 70)
+    @Column(name = "title")
     String title;
 
     @Column(name = "date")
     LocalDate date;
 
-    @Column(name = "preview",  length = 70)
+    @Column(name = "preview", length = 1000)
     String preview;
 
-    @Column(name = "body")
+    @Column(name = "body", length = 1000)
     String body;
 
     @Column(name = "buzz_id")

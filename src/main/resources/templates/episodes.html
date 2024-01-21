@@ -19,7 +19,7 @@
                     </div>
                     <p class="lead">
                         <span th:text="${episode.preview}"></span>
-                        <a href="/episodes/{{episode.pk}}" class="a-link">подробнее</a>
+                        <a th:href="/episodes/{{episode.pk}}" class="a-link">подробнее</a>
                     </p>
                     <audio controls>
                         <source th:src="@{'https://www.buzzsprout.com/1823938/' + ${episode.buzz_id} + '.mp3?download=true'}" type="audio/mpeg" src="">

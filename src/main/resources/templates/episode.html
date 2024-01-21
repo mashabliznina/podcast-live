@@ -5,18 +5,26 @@
 <div th:replace="~{base.html :: header}" xmlns:th="http://www.w3.org/1999/xhtml"></div>
 <main>
     <div class="container">
-        <p class="lead my-3 episode-mb-bottom episode-mt-top">{{object.theme}}<br>{{object.date}}</p>
-        <h1 class="display-4 fst-italic episode-mb-bottom episode-mt-top">{{object.title}}</h1>
+        <h1 class="display-4 fst-italic episode-mb-bottom episode-mt-top">
+            <span th:text="${episode.title}"></span>
+        </h1>
         <div class="row">
             <div class="col-10">
-                <div class="lead my-3" th:each="episode : ${episodes}">
-                    {{object.body | safe}}
+                <div class="lead my-3">
+                    <p class="d-inline-block mb-2 my-text-primary">
+                        <span th:text="${episode.theme}"></span><br>
+                    </p>
+                    <div class="mb-1 text-muted">
+                        <span th:text="${episode.date}"></span>
+                    </div>
+                    <div th:text="${episode.preview}"></div>
+                    <div th:text="${episode.body}"></div>
                 </div>
-                <div id="buzzsprout-player-{{object.buzz_id}}"></div>
-                <script src="https://www.buzzsprout.com/1823938/{{object.buzz_id}}.js?container_id=buzzsprout-player-{{object.buzz_id}}&player=small" type="text/javascript" charset="utf-8"></script>
+                <div id="buzzsprout-player-${episode.buzz_id}"></div>
+                <script th:if="${episode != null}" th:src="@{'https://www.buzzsprout.com/1823938/' + ${episode.buzz_id} + '.js?container_id=buzzsprout-player-' + ${episode.buzz_id} + '&amp;player=small'}" type="text/javascript" charset="utf-8"></script>
             </div>
         </div>
-    </div>
+        </div>
 </main>
 <div th:replace="~{base.html :: footer}" xmlns:th="http://www.w3.org/1999/xhtml"></div>
 </body>

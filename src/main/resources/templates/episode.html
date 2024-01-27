@@ -15,10 +15,10 @@
                         <span th:text="${episode.theme}"></span><br>
                     </p>
                     <div class="mb-1 text-muted">
-                        <span th:text="${episode.date}"></span>
+                        <span th:text="${episode.date}"></span><br>
                     </div>
-                    <div th:text="${episode.preview}"></div>
-                    <div th:text="${episode.body}"></div>
+                    <div th:text="${episode.preview}"></div><br>
+                    <div th:text="${episode.body}"></div><br>
                 </div>
                 <div id="buzzsprout-player-${episode.buzz_id}"></div>
                 <script th:if="${episode != null}" th:src="@{'https://www.buzzsprout.com/1823938/' + ${episode.buzz_id} + '.js?container_id=buzzsprout-player-' + ${episode.buzz_id} + '&amp;player=small'}" type="text/javascript" charset="utf-8"></script>

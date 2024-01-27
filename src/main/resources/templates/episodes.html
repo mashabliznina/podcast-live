@@ -6,11 +6,11 @@
 <main class="container">
     <div class="row">
         <div class="col-md-6 episode-mt-top" th:each="episode : ${episodes}">
-            <div class="card shadow-sm position-relative card-height">
+            <div class="card g-0 shadow-sm h-md-250 position-relative">
                 <div class="card-body">
-                        <strong class="d-inline-block mb-2 my-text-primary">
-                            <span th:text="${episode.theme}"></span>
-                        </strong>
+                    <strong class="d-inline-block mb-2 my-text-primary">
+                        <span th:text="${episode.theme}"></span>
+                    </strong>
                     <h4 class="mb-0">
                         <span th:text="${episode.title}"></span>
                     </h4>
@@ -18,8 +18,8 @@
                         <span th:text="${episode.date}"></span>
                     </div>
                     <p class="lead">
-                        <span th:text="${episode.preview}"></span>
-                        <a th:href="/episodes/{{episode.pk}}" class="a-link">подробнее</a>
+                        <span class="preview-text" th:text="${episode.preview}"></span>
+                        <a th:href="@{/episodes/{id}(id=${episode.id})}" class="a-link">подробнее</a>
                     </p>
                     <audio controls>
                         <source th:src="@{'https://www.buzzsprout.com/1823938/' + ${episode.buzz_id} + '.mp3?download=true'}" type="audio/mpeg" src="">

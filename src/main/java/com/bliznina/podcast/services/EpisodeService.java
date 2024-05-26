@@ -13,5 +13,5 @@ public interface EpisodeService {
     void updateEpisodeInfo(int id);
     void deleteEpisodeById(int id);
 
-    ArrayList<Episode> getSortedNumberEpisodes();
+    ArrayList<Episode> getSortedNumberEpisodes(int maxSize);
 }

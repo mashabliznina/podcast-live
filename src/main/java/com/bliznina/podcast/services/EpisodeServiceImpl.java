@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Component
 public class EpisodeServiceImpl implements EpisodeService{
 
     EpisodeRepository episodeRepository;
@@ -50,11 +52,11 @@ public class EpisodeServiceImpl implements EpisodeService{
     }
 
     @Override
-    public ArrayList<Episode> getSortedNumberEpisodes() {
+    public ArrayList<Episode> getSortedNumberEpisodes(int maxSize) {
         List<Episode> episodes = episodeRepository.findAll(Sort.by(Sort.Direction.DESC, "date"));
         return episodes
                 .stream()
-                .limit(4)
+                .limit(maxSize)
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 }
